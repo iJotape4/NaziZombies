@@ -18,13 +18,13 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UPROPERTY(VisibleDefaultsOnly, Category= Mesh)
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category= Mesh)
 		class USkeletalMeshComponent* mesh1P;
 
-	UPROPERTY(VisibleDefaultsOnly, Category= Mesh)
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category= Mesh)
 		class USkeletalMeshComponent* FP_Gun;
 
-	UPROPERTY(VisibleDefaultsOnly, Category= Mesh)
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category= Mesh)
 		class USceneComponent* FP_MuzzleLocation;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category= Camera, meta =  ( AllowPrivateAccess = "true"));
