@@ -3,7 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "InputAction.h"
 #include "GameFramework/Character.h"
+#include "NaziZombies/NaziZombiesCharacter.h"
 #include "CharacterBase.generated.h"
 
 UCLASS()
@@ -29,8 +31,26 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category= Camera, meta =  ( AllowPrivateAccess = "true"));
 		class UCameraComponent* FirstPersonCameraComponent;
+protected:
+	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent);
 
 public:
+	/** MappingContext */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UInputMappingContext* DefaultMappingContext;
+
+	/** Jump Input Action */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UInputAction* JumpAction;
+
+	/** Move Input Action */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Input, meta=(AllowPrivateAccess = "true"))
+	UInputAction* MoveAction;
+
+	/** Look Input Action */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	class UInputAction* LookAction;
+	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category= Camera)
 		float BaseTurnRate;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category= Camera)
@@ -43,7 +63,13 @@ public:
 		class USoundBase* FireSound;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= Gameplay)
 		class UAnimMontage* FireAnimation;
+protected:
+	/** Called for movement input */
+	void Move(const FInputActionValue& Value);
 
+	/** Called for looking input */
+	void Look(const FInputActionValue& Value);
+	
 protected:
 	void OnFire();
 	void MoveForward(float Val);
@@ -52,7 +78,6 @@ protected:
 	void LookUpRate(float Rate);
 public:	
 	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	FORCEINLINE class USkeletalMeshComponent* GetMesh1P() const {return mesh1P;}
 	FORCEINLINE class UCameraComponent* GetFirstPersonCameraComponent() const {return FirstPersonCameraComponent;}

@@ -2,6 +2,8 @@
 
 
 #include "Player/CharacterBase.h"
+
+#include "EnhancedInputComponent.h"
 #include "NaziZombies/NaziZombiesProjectile.h"
 
 #include  "Animation/AnimInstance.h"
@@ -79,19 +81,29 @@ void ACharacterBase::OnFire()
 	}
 }
 
-void ACharacterBase::MoveForward(float Val)
+void ACharacterBase::Move(const FInputActionValue& Value)
 {
-	if(Val != 0.0f)
+	// input is a Vector2D
+	FVector2D MovementVector = Value.Get<FVector2D>();
+
+	if (Controller != nullptr)
 	{
-		AddMovementInput(GetActorForwardVector(), Val);
+		// add movement 
+		AddMovementInput(GetActorForwardVector(), MovementVector.Y);
+		AddMovementInput(GetActorRightVector(), MovementVector.X);
 	}
 }
 
-void ACharacterBase::MoveRight(float Val)
+void ACharacterBase::Look(const FInputActionValue& Value)
 {
-	if (Val != 0.0f)
+	// input is a Vector2D
+	FVector2D LookAxisVector = Value.Get<FVector2D>();
+
+	if (Controller != nullptr)
 	{
-		AddMovementInput(GetActorRightVector(), Val);
+		// add yaw and pitch input to controller
+		AddControllerYawInput(LookAxisVector.X);
+		AddControllerPitchInput(LookAxisVector.Y);
 	}
 }
 
@@ -107,31 +119,24 @@ void ACharacterBase::LookUpRate(float Rate)
 	AddControllerPitchInput(Rate* BaseLookUpRate*GetWorld()->GetDeltaSeconds());
 }
 
-// Called to bind functionality to input
+//Called to bind functionality to input
 void ACharacterBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
+	// Set up action bindings
+	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent))
+	{
+		// Jumping
+		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);
+		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
 
-	//Set up gameplay key bindings
-	check(PlayerInputComponent);
+		// Moving
+		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ACharacterBase::Move);
 
-	//Bind jump events
-	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
-	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
-
-	//Bind Fire Event
-	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &ACharacterBase::OnFire);
-
-	//Bind movement events
-	PlayerInputComponent->BindAxis("MoveForward", this, &ACharacterBase::MoveForward);
-	PlayerInputComponent->BindAxis("MoveRight", this, &ACharacterBase::MoveRight);
-
-	//We have 2 versions of the rotation bindings to handle different kinds of devices differently
-	// "turn" handles devices that provide an absolute delta, such as a mouse.
-	// "turnrate" is for devices that we choose to treat as a rate of change, such as an analog joystick
-	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
-	PlayerInputComponent->BindAxis("TurnRate", this, &ACharacterBase::TurnRate);
-	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
-	PlayerInputComponent->BindAxis("LookUpRate", this, &ACharacterBase::LookUpRate);
+		// Looking
+		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ACharacterBase::Look);
+	}
+	else
+	{
+		UE_LOG(LogTemplateCharacter, Error, TEXT("'%s' Failed to find an Enhanced Input Component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."), *GetNameSafe(this));
+	}
 }
-
