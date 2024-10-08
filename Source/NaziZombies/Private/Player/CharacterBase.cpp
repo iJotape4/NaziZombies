@@ -65,8 +65,9 @@ void ACharacterBase::BeginPlay()
 
 // Called every frame
 
-void ACharacterBase::OnFire()
+void ACharacterBase::OnFire(const FInputActionValue& Value)
 {
+	UE_LOG( LogTemp, Warning, TEXT("Fire!"));
 	if (ProjectileClass != NULL)
 	{
 		UWorld* const World = GetWorld();
@@ -79,6 +80,23 @@ void ACharacterBase::OnFire()
 			ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
 
 			World -> SpawnActor<ANaziZombiesProjectile>(ProjectileClass, spawnlocation, spawnrotation, ActorSpawnParams);
+		}
+	}
+
+	// Try and play the sound if specified
+	if (FireSound != nullptr)
+	{
+		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
+	}
+	
+	// Try and play a firing animation if specified
+	if (FireAnimation != nullptr)
+	{
+		// Get the animation object for the arms mesh
+		UAnimInstance* AnimInstance = mesh1P->GetAnimInstance();
+		if (AnimInstance != nullptr)
+		{
+			AnimInstance->Montage_Play(FireAnimation, 1.f);
 		}
 	}
 }
@@ -136,6 +154,9 @@ void ACharacterBase::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ACharacterBase::Look);
+
+		//Shooting
+		EnhancedInputComponent->BindAction(FireAction, ETriggerEvent::Started, this, &ACharacterBase::OnFire);
 	}
 	else
 	{

@@ -50,6 +50,10 @@ public:
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	class UInputAction* LookAction;
+
+	/** Fire Input Action */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	class UInputAction* FireAction;
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category= Camera)
 		float BaseTurnRate;
@@ -70,15 +74,13 @@ protected:
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
 	
+	void OnFire(const FInputActionValue& Value);
 protected:
-	void OnFire();
 	void MoveForward(float Val);
 	void MoveRight(float Val);
 	void TurnRate(float Rate);
 	void LookUpRate(float Rate);
 public:	
-	// Called to bind functionality to input
-
 	FORCEINLINE class USkeletalMeshComponent* GetMesh1P() const {return mesh1P;}
 	FORCEINLINE class UCameraComponent* GetFirstPersonCameraComponent() const {return FirstPersonCameraComponent;}
 };
