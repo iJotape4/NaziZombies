@@ -3,3 +3,6 @@
 
 #include "NaziZombie/Game/NaziZombieGameInstanceBase.h"
 
+UNaziZombieGameInstanceBase::UNaziZombieGameInstanceBase()
+{
+}
