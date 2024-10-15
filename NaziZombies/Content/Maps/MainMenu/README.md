@@ -1,1 +1,1 @@
-![Blueprint Screenshot](https://github.com/iJotape4/NaziZombies/raw/md-test/BP_Pics/Maps/MainMenu/W_MainMenu_Graph.jpg)
+![Blueprint Screenshot](https://github.com/iJotape4/NaziZombies/raw/md-test/BP_Pics/Maps/MainMenu/W_MainMenu_Graph.jpg "W_MainMenu_Graph")
