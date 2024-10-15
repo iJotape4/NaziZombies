@@ -1,6 +1,6 @@
 # Main Menu
 ## Menu Level Graph
-![Blueprint Screenshot](https://github.com/iJotape4/NaziZombies/raw/md-test/BP_Pics/Maps/MainMenu/MenuLevelBPGraphh.jpg)
+![Blueprint Screenshot](https://github.com/iJotape4/NaziZombies/raw/md-test/BP_Pics/Maps/MainMenu/MenuLevelBPGraph.jpg)
 
 
 ## W_Main_Menu.uasset
@@ -11,7 +11,7 @@
 #### SetHoveredMapInfo
 ![Blueprint Screenshot](https://github.com/iJotape4/NaziZombies/raw/md-test/BP_Pics/Maps/MainMenu/W_MainMenu_Graph_B_SetHoveredMapInfo.jpg)
 
-###Design
+### Design
 #### Main
 ![Blueprint Screenshot](https://github.com/iJotape4/NaziZombies/raw/md-test/BP_Pics/Maps/MainMenu/W_MainMenuDesign_CP_Main.jpg)
 #### Solo
@@ -19,7 +19,7 @@
 
 ## W_Solo_MapButton
 
-###Design
+### Design
 ![Blueprint Screenshot](https://github.com/iJotape4/NaziZombies/raw/md-test/BP_Pics/Maps/MainMenu/W_SoloMapButton.jpg)
-###Graph
+### Graph
 ![Blueprint Screenshot](https://github.com/iJotape4/NaziZombies/raw/md-test/BP_Pics/Maps/MainMenu/W_SoloMapButton_Graph.jpg)
