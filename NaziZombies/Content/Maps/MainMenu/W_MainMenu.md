@@ -1,1 +1,1 @@
-![Blueprint Screenshot](NaziZombies/BP_Pics/Maps/MainMenu/W_MainMenu_Graph.jpg)
+![Blueprint Screenshot](../../../../../BP_Pics/Maps/MainMenu/W_MainMenu_Graph.jpg)
