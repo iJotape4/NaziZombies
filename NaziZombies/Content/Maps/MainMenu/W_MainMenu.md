@@ -1,1 +1,1 @@
-![Blueprint Screenshot](BP_Pics\Maps\MainMenu)
+![Blueprint Screenshot](../BP_Pics/Maps/MainMenu)
