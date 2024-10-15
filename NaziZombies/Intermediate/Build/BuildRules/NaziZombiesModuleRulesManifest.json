@@ -1,9 +1,0 @@
-{
-	"SourceFiles": [
-		"D:\\Repositories\\UnrealProjects\\NaziZombies\\Source\\NaziZombies\\NaziZombies.Build.cs",
-		"D:\\Repositories\\UnrealProjects\\NaziZombies\\Plugins\\UEGitPlugin\\Source\\GitSourceControl\\GitSourceControl.Build.cs",
-		"D:\\Repositories\\UnrealProjects\\NaziZombies\\Source\\NaziZombies.Target.cs",
-		"D:\\Repositories\\UnrealProjects\\NaziZombies\\Source\\NaziZombiesEditor.Target.cs"
-	],
-	"EngineVersion": "5.4.4"
-}
