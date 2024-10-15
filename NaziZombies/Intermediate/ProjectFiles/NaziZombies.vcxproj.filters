@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\NaziZombies.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\NaziZombies.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\NaziZombiesEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\NaziZombies">
+      <UniqueIdentifier>{4E0298DA-CAE6-326E-AB21-E69664E90BCA}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\NaziZombies\NaziZombies.Build.cs">
+      <Filter>Source\NaziZombies</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\NaziZombies\NaziZombies.cpp">
+      <Filter>Source\NaziZombies</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NaziZombies\NaziZombies.h">
+      <Filter>Source\NaziZombies</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NaziZombies\NaziZombiesCharacter.cpp">
+      <Filter>Source\NaziZombies</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NaziZombies\NaziZombiesCharacter.h">
+      <Filter>Source\NaziZombies</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NaziZombies\NaziZombiesGameMode.cpp">
+      <Filter>Source\NaziZombies</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NaziZombies\NaziZombiesGameMode.h">
+      <Filter>Source\NaziZombies</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NaziZombies\NaziZombiesPlayerController.cpp">
+      <Filter>Source\NaziZombies</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NaziZombies\NaziZombiesPlayerController.h">
+      <Filter>Source\NaziZombies</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NaziZombies\NaziZombiesProjectile.cpp">
+      <Filter>Source\NaziZombies</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NaziZombies\NaziZombiesProjectile.h">
+      <Filter>Source\NaziZombies</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NaziZombies\TP_PickUpComponent.cpp">
+      <Filter>Source\NaziZombies</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NaziZombies\TP_PickUpComponent.h">
+      <Filter>Source\NaziZombies</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\NaziZombies\TP_WeaponComponent.cpp">
+      <Filter>Source\NaziZombies</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\NaziZombies\TP_WeaponComponent.h">
+      <Filter>Source\NaziZombies</Filter>
+    </ClInclude>
+    <Filter Include="Source\NaziZombies\Private">
+      <UniqueIdentifier>{F3E081B7-CD1F-3939-9546-2E5D31A7F0AF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\NaziZombies\Private\NaziZombie">
+      <UniqueIdentifier>{A8EBA92F-162D-37A0-AD76-D851792F270F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\NaziZombies\Private\NaziZombie\Game">
+      <UniqueIdentifier>{9BF2DE2D-60B2-395D-8CFF-DC5D6074B934}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\NaziZombies\Private\NaziZombie\Game\NaziZombieGameInstanceBase.cpp">
+      <Filter>Source\NaziZombies\Private\NaziZombie\Game</Filter>
+    </ClCompile>
+    <Filter Include="Source\NaziZombies\Private\Player">
+      <UniqueIdentifier>{F884AFDB-4FC8-31EE-9985-F494E06C87E8}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\NaziZombies\Private\Player\CharacterBase.cpp">
+      <Filter>Source\NaziZombies\Private\Player</Filter>
+    </ClCompile>
+    <Filter Include="Source\NaziZombies\Public">
+      <UniqueIdentifier>{CB836910-1B7C-3F03-9090-7352EFCA175F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\NaziZombies\Public\NaziZombie">
+      <UniqueIdentifier>{42FB0A77-4473-3973-B353-E1CFE9CEA9BF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\NaziZombies\Public\NaziZombie\Game">
+      <UniqueIdentifier>{DA896DBF-22D9-3258-9887-96C84906FC9A}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\NaziZombies\Public\NaziZombie\Game\NaziZombieGameInstanceBase.h">
+      <Filter>Source\NaziZombies\Public\NaziZombie\Game</Filter>
+    </ClInclude>
+    <Filter Include="Source\NaziZombies\Public\Player">
+      <UniqueIdentifier>{9FD6AAFA-96F9-3D73-B801-DF1243B55401}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\NaziZombies\Public\Player\CharacterBase.h">
+      <Filter>Source\NaziZombies\Public\Player</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

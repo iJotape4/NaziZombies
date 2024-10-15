@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "NaziZombies",
+			"Path": "..\\Source\\NaziZombies.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "NaziZombiesEditor",
+			"Path": "..\\Source\\NaziZombiesEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

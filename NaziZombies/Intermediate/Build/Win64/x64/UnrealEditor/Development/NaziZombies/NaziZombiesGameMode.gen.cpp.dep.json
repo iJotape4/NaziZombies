@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\repositories\\unrealprojects\\nazizombies\\intermediate\\build\\win64\\unrealeditor\\inc\\nazizombies\\uht\\nazizombiesgamemode.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\repositories\\unrealprojects\\nazizombies\\intermediate\\build\\win64\\x64\\nazizombieseditor\\development\\unrealed\\sharedpch.unrealed.project.novalfmtstr.valapi.cpp20.inclorderunreal5_3.h.pch",
+        "Includes": [
+            "d:\\repositories\\unrealprojects\\nazizombies\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\nazizombies\\definitions.nazizombies.h",
+            "d:\\repositories\\unrealprojects\\nazizombies\\source\\nazizombies\\nazizombiesgamemode.h",
+            "d:\\unreal engine\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "d:\\unreal engine\\ue_5.4\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "d:\\unreal engine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "d:\\unreal engine\\ue_5.4\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "d:\\repositories\\unrealprojects\\nazizombies\\intermediate\\build\\win64\\unrealeditor\\inc\\nazizombies\\uht\\nazizombiesgamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
