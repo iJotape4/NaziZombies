@@ -207,7 +207,6 @@ Backup/*
 *.st
 *.srt
 ## Textures
-*.jpg
 *.psd
 *.xcf
 *.exr
@@ -224,7 +223,6 @@ Backup/*
 !Content/Splash/Splash*.png
 !Content/Splash/EdSplash*.png
 !Content/Editor/Icons/**/*.png
-!ProjectBorealis.png
 !Build/Linux/Application.png
 !Documentation/**/*.png
 !.github/doxygen/logo.png
