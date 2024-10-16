@@ -1,4 +1,4 @@
-# Main Menu
+# Maps
 
 * ## Map 1 
   + ### Design
