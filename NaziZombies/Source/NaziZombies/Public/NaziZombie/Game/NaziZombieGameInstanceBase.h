@@ -31,4 +31,9 @@ class NAZIZOMBIES_API UNaziZombieGameInstanceBase : public UGameInstance
 	GENERATED_BODY()
 public:
 	UNaziZombieGameInstanceBase();
+
+protected:
+	
+	UFUNCTION(BlueprintCallable)
+	void GoToMap(FString MAPURL);
 };
