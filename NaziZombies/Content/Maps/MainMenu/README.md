@@ -15,6 +15,10 @@
       ![Blueprint Screenshot](https://github.com/iJotape4/NaziZombies/raw/master/BP_Pics/Maps/MainMenu/W_MainMenuDesign_CP_Main.jpg)
     - #### Solo
       ![Blueprint Screenshot](https://github.com/iJotape4/NaziZombies/raw/master/BP_Pics/Maps/MainMenu/W_MainMenuDesign_CP_Solo.jpg)
+    - #### Coop
+      ![Blueprint Screenshot](https://github.com/iJotape4/NaziZombies/raw/master/BP_Pics/Maps/MainMenu/W_MainMenuDesign_CP_Coop.jpg)
+    - #### Host
+      ![Blueprint Screenshot](https://github.com/iJotape4/NaziZombies/raw/master/BP_Pics/Maps/MainMenu/W_MainMenuDesign_CP_Host.jpg)
 
 * ## W_Solo_MapButton
   + ### Design
